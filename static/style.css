@@ -58,3 +58,18 @@ button:hover {
 .add-word-form button {
     margin-left: 0.5rem;
 }
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+#copy-button {
+    background-color: #6c757d;
+}
+
+#copy-button:hover {
+    background-color: #5a6268;
+}

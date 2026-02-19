@@ -10,9 +10,12 @@
     <div class="container">
         <h1>Excuse Generator</h1>
         <p class="sentence">{{ sentence }}</p>
-        <form action="{{ url_for('index') }}" method="get">
-            <button type="submit">Generate New Excuse</button>
-        </form>
+        <div class="buttons">
+            <form action="{{ url_for('index') }}" method="get">
+                <button type="submit">Generate New Excuse</button>
+            </form>
+            <button id="copy-button">Copy</button>
+        </div>
 
         <div class="add-word-form">
             <h2>Add a new word</h2>
@@ -27,5 +30,19 @@
             </form>
         </div>
     </div>
+
+    <script>
+        const copyButton = document.getElementById('copy-button');
+        const sentence = document.querySelector('.sentence').innerText;
+
+        copyButton.addEventListener('click', () => {
+            navigator.clipboard.writeText(sentence).then(() => {
+                copyButton.innerText = 'Copied!';
+                setTimeout(() => {
+                    copyButton.innerText = 'Copy';
+                }, 2000);
+            });
+        });
+    </script>
 </body>
 </html>

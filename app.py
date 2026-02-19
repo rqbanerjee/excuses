@@ -63,8 +63,8 @@ def index():
     sentence_templates = [
         "Sorry, I can't come out today, because {random_subject} {random_verb} my {random_object}.",
         "Sorry gents, but I'm going to be late because {random_subject} {random_verb} my {random_object}.",
-        "Hey dudes,You're not going to believe this, but {random_subject} {random_verb} my {random_object}.",
-        "I'm so sorry, but i have to passs tonight since {random_subject} {random_verb} my {random_object}.",
+        "Hey dudes,You're not going to believe this, but {random_subject} {random_verb} my {random_object} and I can't come out.",
+        "I'm so sorry, but i have to pass tonight since {random_subject} {random_verb} my {random_object}.",
     ]
 
     sentence_template = random.choice(sentence_templates)
